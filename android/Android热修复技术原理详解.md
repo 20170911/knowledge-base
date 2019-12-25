@@ -83,11 +83,11 @@ Hotfix|Nuwa|-|-|-
 - 只Hook App本身的进程，不需要Root权限
 
 ---
-![Dexposed-native解决方案原理]("./images/Dexposed-native解决方案原理.png")
+![Dexposed-native解决方案原理](./images/Dexposed-native解决方案原理.png)
 
-![Dexposed-native解决方案原理2]("./images/Dexposed-native解决方案原理2.png")
+![Dexposed-native解决方案原理2](./images/Dexposed-native解决方案原理2.png)
 
-![Dexposed-native解决方案原理3]("./images/Dexposed-native解决方案原理3.png")
+![Dexposed-native解决方案原理3](./images/Dexposed-native解决方案原理3.png)
 
 ---
 
@@ -146,7 +146,7 @@ Hotfix|Nuwa|-|-|-
 - 越靠前的Dex优先被系统使用，基于类级别的修复
 
 ---
-![Qzone-Dex插桩方案]("./images/Qzone-Dex插桩方案.png")
+![Qzone-Dex插桩方案](./images/Qzone-Dex插桩方案.png)
 
 ---
 
@@ -186,7 +186,7 @@ Hotfix|Nuwa|-|-|-
 - 编译打包阶段自动为每个class都增加了一个类型为ChangeQuickRedirect的静态成员，而在每个方法前都插入了使用changeQuickRedirect相关的逻辑，当 changeQuickRedirect不为null时，可能会执行到accessDispatch从而替换掉之前老的逻辑，达到fix的目的。
 
 ---
-![美团Robust-instantRun热插拔原理]("./images/美团Robust-instantRun热插拔原理.png")
+![美团Robust-instantRun热插拔原理](./images/美团Robust-instantRun热插拔原理.png)
 
 ---
 
@@ -223,11 +223,11 @@ Hotfix|Nuwa|-|-|-
 - 服务端做dex差量，将差量包下发到客户端，在ART模式的机型上本地跟原apk中的classes.dex做merge，merge成为一个新的merge.dex后将merge.dex插入pathClassLoader的dexElement，原理类同Q-Zone，为了实现差量包的最小化，Tinker自研了DexDiff/DexMerge算法。Tinker还支持资源和So包的更新，So补丁包使用BsDiff来生成，资源补丁包直接使用文件md5对比来生成，针对资源比较大的（默认大于100KB属于大文件）会使用BsDiff来对文件生成差量补丁。
 
 ---
-![微信Tinker]("./images/微信Tinker.png")
+![微信Tinker](./images/微信Tinker.png)
 
-![微信Tinker2]("./images/微信Tinker2.png")
+![微信Tinker2](./images/微信Tinker2.png)
 
-![微信Tinker3]("./images/微信Tinker3.png")
+![微信Tinker3](./images/微信Tinker3.png)
 
 ---
 
@@ -263,7 +263,7 @@ Hotfix|Nuwa|-|-|-
 > 原理(双剑合璧)：
 
 ---
-![阿里Sophhix]("./images/阿里Sophhix.png")
+![阿里Sophhix](./images/阿里Sophhix.png)
 
 ---
 
@@ -272,7 +272,7 @@ Hotfix|Nuwa|-|-|-
 - Andfix底层ArtMethod结构时采用内部变量一一替换，倒是这个各个厂商是会修改的，所以兼容性不好。
 
 ---
-![阿里Sophhix2]("./images/阿里Sophhix2.png")
+![阿里Sophhix2](./images/阿里Sophhix2.png)
 
 ---
 
@@ -280,7 +280,7 @@ Hotfix|Nuwa|-|-|-
 
 ---
 
-![阿里Sophhix]("./images/阿里Sophhix3.png")
+![阿里Sophhix](./images/阿里Sophhix3.png)
 
 ---
 
@@ -302,7 +302,7 @@ Hotfix|Nuwa|-|-|-
 
 ---
 
-![阿里Sophhix]("./images/微信Tinker3.png")
+![阿里Sophhix](./images/微信Tinker3.png)
 
 ---
 
@@ -362,7 +362,7 @@ Android版本|全部支持|全部支持|全部支持
 
 ---
 
-![热修复历程]("./images/热修复历程.png")
+![热修复历程](./images/热修复历程.png)
 
 ---
 
